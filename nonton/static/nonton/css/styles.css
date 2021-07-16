@@ -1,0 +1,6 @@
+.jumbotron {
+    background-image: url("/static/nonton/img/postingan.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
