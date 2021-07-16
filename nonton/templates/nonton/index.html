@@ -1,11 +1,21 @@
-{% extends 'base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{title}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>{{heading}}</h1>
+        <h2>{{subheading}}</h2>
 
-{% block appcss %}
-    <link rel="stylesheet" href="{% static "nonton/css/styles.css" %}"/>
-{% endblock appcss %}
-
-{% block header %}
-<h1 class="text-left" style="margin-top:50px">{{heading}}</h1>
-<p class="lead text-left">{{subheading}}</p>
-{% endblock header %}
+        {% for post in Posts %}
+            <h3>{{post.title}}</h3>
+            <p>{{post.description}}</p>
+            <a href="{{post.url}}">{{post.title}}</a>
+        {% endfor %}
+    </body>
+</html>
