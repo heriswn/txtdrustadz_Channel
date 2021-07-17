@@ -17,9 +17,7 @@
     {% endfor %}
     </ul>
 
-    {% for post in Posts %}
-        <a href="{% url 'nonton:slug' slugInput=post.slug %}"><h1>{{post.title}}</h1></a>
-        <h2>{{post.publish}}</h2>
-        <p>{{post.description|truncatechars:200}}</p>
-    {% endfor %}
+    <h1>{{Posts.title}}</h1>
+    <h2>{{Posts.publish}}</h2>
+    <p>{{Posts.description}}</p>
 {% endblock konten1 %}

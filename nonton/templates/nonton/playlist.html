@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 
 {% block header %}
-<h1 class="display-4">{{title}}</h1>
-<p class="lead">{% lorem %}</p>
+<h1 class="display-4">{{heading}}</h1>
+<h2>Tampilkan Playlist:</h2>
 {% endblock header %}
 
 {% block konten1 %}
+
     <ul class="nav">
     <li class="nav-item">
         <a class = "nav-link" href="{% url 'nonton:index' %}">All-post</a>
     </li>
     {% for listPlaylist in Playliest %}
         <li class="nav-item">
-            <a class = "nav-link" href="{% url 'nonton:playlist' playlistInput=listPlaylist.playlist %}">{{listPlaylist.playlist}}</a>
+            <a class = "nav-link" href="{% url 'nonton:playlist' playlistInput=listPlaylist.playlist%} ">{{listPlaylist.playlist}}</a>
         </li>
     {% endfor %}
     </ul>

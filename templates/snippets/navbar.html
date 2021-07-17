@@ -19,13 +19,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="/">Home</a>
+          <a class="nav-link active" href="{% url 'index' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/nonton">Nonton</a>
+          <a class="nav-link active" href="{% url 'nonton:index' %}">Nonton</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/about">About</a>
+          <a class="nav-link active" href="{% url 'about:index' %}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'admin:index' %}">Admin</a>
         </li>
       </ul>
     </div>
